@@ -38,8 +38,8 @@ public class Player : MonoBehaviour
 
         Vector3 newMove = input * _moveSpeed * Time.fixedDeltaTime;
         newMove.y = Rigidbody.velocity.y;
-        //Rigidbody.velocity = newMove;
-        Rigidbody.AddForce(newMove,ForceMode.Impulse);
+        Rigidbody.velocity = newMove;
+        //Rigidbody.AddForce(newMove,ForceMode.Impulse);
 
     }
     public int point = 0; //Bu değeri tanımlamanın daha optimize yolları vardır.
