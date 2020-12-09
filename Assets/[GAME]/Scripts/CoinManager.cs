@@ -20,6 +20,17 @@ public class CoinManager : Singleton<CoinManager>
         {
             Coins.Remove(coin);
         }
+
+        CheckCoinState();
+
+    }
+
+    public void CheckCoinState()
+    {
+        if (Coins.Count == 0)
+        {
+            EventManager.OnGameOver.Invoke();
+        }
     }
 
 }

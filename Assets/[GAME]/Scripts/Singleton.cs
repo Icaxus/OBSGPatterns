@@ -25,6 +25,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
                 return null;
             }
 
+            //lock birden falza kez bu alanın çalıştırılmasının önüne geçer.
             lock (m_Lock)
             {
                 if (m_Instance == null)
